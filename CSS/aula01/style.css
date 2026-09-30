@@ -1,0 +1,13 @@
+body{
+    background-color: #b0c8cc;
+}
+h1{
+    color: navy;
+    background-color: antiquewhite;
+}
+/* Isso é um comentário */
+p{
+    color: #333;
+    background-color:bisque;
+    font-family: sans-serif;
+}
