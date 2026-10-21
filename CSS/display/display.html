@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .badge{
+            display: flex;
+            background-color: #bae6fd;
+            color: #0369a1;
+            padding: 10px;
+            /* Tentativa de definir um tamanho rigido */
+            width: 150px;
+            height: 60px;
+             /* tentativa de espaçamento vertical */
+            margin-bottom: 30px;
+            justify-content:  center;
+            align-items: center;
+        }
+        .bnt-acao{
+            display: block;
+            width: 100px;
+            background-color: #0284c7;
+            color: white;
+            padding: 12px;
+            margin-top: 10px;
+            text-align: center;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .alerta-sistema{
+            background-color: #fef08a;
+            color: #854d0e;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #facc15;
+
+            /* A linha abaixo ativa o modo fantasma do Aviso */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="card-perfil">
+    <h2> Perfil do Jogador</h2>
+
+    <p>Conquistas recentes no sistema</p>
+    <span class="badge"> Nível 99 </span>
+    <span class="badge"> Mestre CSS </span>
+    <span class="badge"> VIP</span>
+
+    <!-- Ações do Perfil -->
+     <a href="#" class="bnt-acao">Editar Perfil</a>
+     <a href="#" class="bnt-acao">Ver inventário</a><br>
+
+     <!-- Alerta -->
+      <div class="alerta-sistema">
+        Manutenção Programada
+      </div>
+</div>
+    
+</body>
+</html>

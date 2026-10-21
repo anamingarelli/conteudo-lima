@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+.cupom-gamer{
+    border: 4px dotted #e11d48;
+    padding: 50px 60px;
+    margin: 50px 50px
+}
+.jogo-mais-vendido{
+    border: 4px dashed ;
+    padding: 50px 60px;
+    margin: 50px 25px auto;
+}
+.btn-neon{
+/* Permite aplicar o padding e
+largura com segurança */
+display: inline-block;
+/* Cor do fundo */
+background-color: #4f46e5;
+/* Cor do texto do botão */
+color: #ffffff;
+/* Formato retangular espaçado para o clique */
+padding: 12px 28px;
+/* Borda sútil de acabamento */
+border: 2px solid #4338ca;
+/* Arredondar os cantos */
+border-radius: 8px;
+/* Negrito do texto */
+font-weight: 700;
+/* Remove o sublinhado */
+text-decoration: none;
+/* Transforma o ponteiro do mouse em mãozinha de clique */
+cursor: pointer;
+/* Suavizar a mudança de cor e movimento*/
+transition: all 0.2s ease;
+}
+.btn-neon:hover{
+    /* Clareia o botão ao encostar o mouse */
+    background-color: #6366f1;
+    /* Faz o botão flutuar 3px para cima */
+    transform: translateY(-3px);
+}
+
+.btn-neon:active{
+    transform: translateY(1px);
+}
+
+.btn-segundario {
+  background: transparent;
+  color: #0ea5e9;
+  border: 2px dotted #0ea5e9;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+  border-style: solid;
+  transform: translateY(-3px);
+}
+   
