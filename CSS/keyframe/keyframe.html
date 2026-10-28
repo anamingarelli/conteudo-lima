@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe</title>
+    <style>
+        /* Efeito de flutuação contínua(levitação) */
+        @keyframes
+        flutuar{
+
+            /* Na metade do tempo, sobe 8 pixels */
+            0%{
+                transform: translateY(0px)
+            }
+            50%{
+                transform: translateY(-8px);
+            }
+            /* Volta suavemente para o ponto inicial */
+            100%{
+                transform: translateY(0px)
+            }
+            }
+
+            .icone-bau{
+                width: 50px;
+                height: auto;
+                /* Nome - Duração - Curva - Repetição Infinita */
+                animation: flutuar 2.5s ease-in-out infinite;
+            }
+            @media (max-width: 768px
+             ){
+                /* Transforma 3 colunas e apenas uma coluna */
+                .vitrine-jogos{
+                    background-color: antiquewhite;
+                    grid-template-columns: 1fr;
+                }
+                .navbar-gamer{
+                    display: flex;
+                    justify-self: space-between;
+                    background-color: antiquewhite;
+                    flex-direction: column;
+                    height: auto;
+                    padding: 16px;
+                    border-bottom: 2px solid;
+                }
+            }
+    </style>
+</head>
+<body>
+    <header class="navbar-gamer">
+        <h1>Game Store</h1>
+        <nav>
+            <a href="#">início</a>
+            <a href="#">Jogos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main class="vitrine-jogos">
+        <img src="https://cdn-icons-png.flaticon.com/512/4883/4883370.png" alt="Baú de Oferta" class="icone-bau">
+        <div class="card-jogos">
+            <h3>Jogo 1</h3>
+        </div>
+        <div class="card-jogos">
+            <h3>Jogo 2</h3>
+        </div>
+        <div class="card-jogos">
+            <h3>Jogo 3</h3>
+        </div>
+
+    </main>
+</body>
+</html>

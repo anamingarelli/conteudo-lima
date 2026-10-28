@@ -5,14 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justify</title>
     <style>
+       
         .navbar-gamer{
-            /* Ativa o FLexbox para o elemento pai header */
+            /* Ativa o Flexbox para o elemento pai header */
             display: flex;
             /* Coloca o primeiro filho <div> na esquerda e o outro filho <nav> a direita */
             justify-content: space-between;
             align-items: center;
+            height: 30px;
+            padding: 0 24px;
+            background-color: #0f172a;
+            color: white;
+            
+            }
+            .menu-links{
+                /* Tranformando o container menu-links em um container Flex */
+                display: flex;
+                /* Criar um espaço entre os links do container */
+                gap: 20px;
+            }
 
-        }
+            a{
+                color: white;
+                text-decoration: none;
+            }
+
+            .jogo-principal{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #0f200a ;
+                height: 300px;
+                margin: 10px 0;
+            }
+            p{
+                color: white;
+                font-weight: bold;
+            }
     </style>
 </head>
 <body>
@@ -23,8 +52,13 @@
             <a href="">Catalogo</a>
             <a href="">Perfil</a>
         </nav>
-
     </header>
+
+    <div class="jogo-principal">
+        <p>
+            God of War
+        </p>
+    </div>
     
 </body>
 </html>
