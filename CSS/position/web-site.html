@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orcas: Vida Selvagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra fixa no topo com botão mostrar / esconder explicações -->
+    <div class="barra-fixa">
+        <div>
+            <strong style="color: #00d2ff;"> Laboratório de CSS3:</strong>
+            <span style="font-size: 14px; color: #cbd5e1;">Veja a página funcionando e entenda o código de cada parte!</span>
+        </div>
+        <button id="btnToggle" class="btn-alternar-explicacoes" onclick="altermarExplicacoes()"> Mostrar / Esconder
+        </button>
+    </div>
+
+    <!-- Cabeçalho (navbar) -->
+     <div class="container-pagina">
+        <header class="navbar">
+            <div class="logo">ORCA.WEB</div>
+            <nav class="menu-links">
+                <a href="#sonar">Sonar</a>
+                <a href="#habitos">Hábitos</a>
+                <a href="#alcateia">Alcateia</a>
+                <a href="#codigo">Código</a>
+            </nav>
+        </header>
+
+        <!-- Explicações Componente 1 -->
+         <div class="explicacao-css">
+            <span class="tag-componente">Componente 1 - Flexbox no Cabeçalho</span>
+            <h4>Colocando o logo na esquerda e o menu na direita</h4>
+            <p>
+                <strong>Analogia da prateleira organizada:</strong> Quando colocamos <code>display: flex;</code> na barra do topo, todos os filhos entram na mesma linha. Depois, o comando <code>justify-content: space-between;</code> empurra o primeiro item (logo) para a ponta esquerda e o último item (links) para a ponta direita
+            </p>
+            <div class="bloco-codigo">
+            .navbar {
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            </div>
+         </div>
+
+         <!-- Componente 2 - Banner principal -->
+          <section class="hero-banner">
+            <!-- Código SVG simples de uma ORCA -->
+             <div class="orca-icone">
+               <svg width="110" height="70" viewBox="0 0 120 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Nadadeira Dorsal -->
+                    <path d="M52 26 C54 6, 66 2, 72 2 C68 14, 68 22, 72 28 Z" fill="#00d2ff"/>
+                    <!-- Corpo da Orca -->
+                    <path d="M8 46 C22 22, 65 18, 102 36 C110 38, 115 30, 118 24 C115 36, 115 44, 118 54 C112 48, 106 45, 98 46 C68 60, 28 58, 8 46 Z" fill="#061326" stroke="#00d2ff" stroke-width="3"/>
+                    <!-- Mancha Branca do Olho e Barriga -->
+                    <ellipse cx="32" cy="35" rx="8" ry="3.5" fill="#ffffff"/>
+                    <path d="M12 46 C35 44, 65 44, 96 46 C68 58, 32 56, 12 46 Z" fill="#ffffff"/>
+                </svg>  
+             </div>
+
+             <h1>A Vida Selvagem das Orcas</h1>
+            <p>
+                Conhecidas como oss reis dos mares, as orcas são os maiores golfinhos do planeta. Elas caçam em equipe, conversam com dialetos próprios e dominam todos os oceanos!
+            </p>
+
+            <button class="btn-mergulhar" onclick="document.getElementById('sonar').scrollIntoView({behavior:'smooth'})">
+                Mergulhar Agora
+            </button>
+          </section>
+          <!-- Explicação do componente 2 -->
+           <div class="explicacao-css">
+            <span class="tag-componente"> Componente 2 - Animações (@Keyframes)</span>
+            <h4> Como a orca flutua sozinha e estilizaçãp do botão </h4>
+            <p>
+            Com o <code>@keyframes flutuar</code>, criamos um roteiro dizendo para a Orca subir <code>-14px</code> na metade do tempo (<code>50%</code>) e voltar ao normal em loop infinito (<code>infinite</code>). Já no botão, usamos <code>padding</code> para o texto respirar lá dentro e <code>:hover</code> + <code>transition: 0.3s</code> para ele crescer suavemente quando o mouse encosta!
+            </p>
+
+           </div>
+           <div class="bloco-codigo">
+                @keyframes flutuar {
+                0%, 100% { transform: translateY(0px); }   /* Posição inicial e final */
+                50%      { transform: translateY(-14px); } /* Sobe 14 pixels no meio da animação */
+                }
+
+                .btn-mergulhar {
+                padding: 14px 28px;      /* "Plástico-bolha" interno que dá corpo ao botão */
+                border-radius: 8px;      /* Arredonda as quinas do botão */
+                transition: 0.3s;        /* Deixa a animação do mouse super suave */
+                }
+                .btn-mergulhar:hover {
+                transform: scale(1.08);  /* Aumenta 8% quando o mouse passa por cima */
+                }
+            </div>
+     </div>
+
+     <!-- Componente 3 -->
+      <section id="somar" class="caixa-sonar">
+        <h2>Curiosidade: O sinal de Sonar da Orca</h2>
+        <p>
+            Na escuridão do oceano, a orca enxerga com o som! Ela emite cliques que viajam pela água, batem nos peixes e voltam como um eco, revelando o tamanho e a distância exata da presa.
+        </p>
+      </section>
+
+      <!-- Explicação do componente 3 -->
+       <div class="explicacao-css">
+        <span> Componente 3 - Box Model </span>
+        <p>
+                <strong> Olhe atentamente para a caixa acima:</strong> Repare que o <strong><code>dotted</code> (pontilhado)</strong> está na <strong><code>border</code> (a moldura azul)</strong>, enquanto o <strong><code>padding</code> é só o espaço vazio (plástico-bolha)</strong> que impede o texto de encostar nas bolinhas! Já a <code>margin</code> é o espaço vazio do lado de fora para afastar esta caixa das outras.
+                </p>
+                <div class="bloco-codigo">
+                    .caixa-sonar {
+                    padding: 20px;               /* 1. Espaço VAZIO por dentro (só aceita medidas!) */
+                    border: 4px dotted #00d2ff;  /* 2. A MOLDURA física (é AQUI que vai o dotted!) */
+                    margin: 20px 0;              /* 3. Espaço VAZIO por fora para afastar os vizinhos */
+                    }
+                
+       </div>
+       <!-- Componente 4 -->
+</div>
+</body>
+</html>
